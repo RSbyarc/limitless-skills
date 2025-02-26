@@ -44,49 +44,6 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff0000;  /* При наведении изменяется цвет */
-}
-
-/* Увеличение размера при наведении */
-nav ul li:hover {
-    transform: scale(1.2);  /* Увеличиваем размер элемента */
-}
-
-
-/* Шапка и логотип */
-header {
-    background: #000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 5px 10px; /* Уменьшаем отступы */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: padding 0.3s ease; /* Плавное изменение */
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 10px; /* Меньше отступы */
-    transition: transform 0.3s ease; /* Плавное увеличение */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
     font-size: 14px; /* Меньше шрифт */
     transition: color 0.3s;
 }
@@ -102,7 +59,7 @@ nav ul li:hover {
 
 /* Логотип */
 .logo {
-    height: 35px; /* Меньше размер */
+    height: 50px;
     margin: 0 15px;
     vertical-align: middle;
     transition: transform 0.3s;
@@ -111,7 +68,6 @@ nav ul li:hover {
 .logo:hover {
     transform: scale(1.1);
 }
-
 
 /* Главная */
 #home {
@@ -176,18 +132,7 @@ footer {
     color: #333;
 }
 
-/* Логотип */
-.logo {
-    height: 50px;
-    margin: 0 15px;
-    vertical-align: middle;
-    transition: transform 0.3s;
-}
-
-.logo:hover {
-    transform: scale(1.1);
-}
-
+/* Контакты */
 #contacts {
     padding: 20px;
     background-color: #f4f4f4;
