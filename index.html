@@ -15,6 +15,23 @@
 </head>
 <body>
 
+      <!-- Кнопка для открытия модального окна -->
+    <button class="login-btn" id="loginBtn">Войти</button>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Войти на сайт</h2>
+            <form>
+                <input type="text" id="username" placeholder="Логин" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+            <button class="close-btn" id="closeModal">Закрыть</button>
+        </div>
+    </div>
+
+
 <script>
     window.addEventListener('scroll', function() {
         let header = document.querySelector('header');
