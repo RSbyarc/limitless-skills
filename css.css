@@ -88,7 +88,7 @@ nav ul li:hover {
 
 /* Логотип */
 .logo {
-    height: 55px; /* Меньше размер */
+    height: 45px; /* Меньше размер */
     margin: 0 15px;
     vertical-align: middle;
     transition: transform 0.3s;
