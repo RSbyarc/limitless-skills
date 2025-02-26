@@ -25,8 +25,9 @@ header {
 
 /* Когда шапка скрыта или сжата */
 header.shrunk {
-    padding: 5px 0; /* Уменьшаем отступы для компактного вида */
+    display: none; /* Скрывает шапку */
 }
+
 
 nav ul {
     display: flex;
