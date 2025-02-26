@@ -33,22 +33,27 @@
 
 
 <script>
-    window.addEventListener('scroll', function() {
-        let header = document.querySelector('header');
-        let logo = document.querySelector('.logo');
-        let navLinks = document.querySelector('nav ul');
-        
-        // Когда прокручиваем страницу больше, чем на 50px, уменьшаем шапку
-        if (window.scrollY > 50) {
-            header.classList.add('shrunk');
-            logo.style.display = 'none'; // Скрыть логотип
-            navLinks.style.display = 'none'; // Скрыть навигационные ссылки
-        } else {
-            header.classList.remove('shrunk');
-            logo.style.display = 'block'; // Показать логотип
-            navLinks.style.display = 'flex'; // Показать навигационные ссылки
-        }
-    });
+  // Получаем элементы
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeModal = document.getElementById('closeModal');
+
+        // Открытие модального окна при нажатии на кнопку
+        loginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'flex';
+        });
+
+        // Закрытие модального окна при нажатии на кнопку "Закрыть"
+        closeModal.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+        });
+
+        // Закрытие модального окна при клике вне модального окна
+        window.addEventListener('click', (event) => {
+            if (event.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+        });
 </script>
 
     
