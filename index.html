@@ -14,48 +14,47 @@
 <body>
 
 <!-- Кнопка входа -->
-<button id="loginBtn">Войти</button>
+    <button id="loginBtn">Войти</button>
 
-<!-- Модальное окно -->
-<div id="loginModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Вход</h2>
-    <form id="loginForm">
-      <label for="username">Логин:</label>
-      <input type="text" id="username" name="username" required><br><br>
-      <label for="password">Пароль:</label>
-      <input type="password" id="password" name="password" required><br><br>
-      <button type="submit">Войти</button>
-    </form>
-  </div>
-</div>
+    <!-- Модальное окно -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form id="loginForm">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
 
-<script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var modal = document.getElementById("loginModal");
+            var btn = document.getElementById("loginBtn");
+            var span = document.getElementsByClassName("close")[0];
 
-document.addEventListener("DOMContentLoaded", function() {
-  var modal = document.getElementById("loginModal");
-  var btn = document.getElementById("loginBtn");
-  var span = document.getElementsByClassName("close")[0];
+            // Открываем модальное окно при клике на кнопку
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
 
-  btn.onclick = function() {
-      modal.style.display = "block";
-  }
+            // Закрываем модальное окно при клике на крестик
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
 
-  span.onclick = function() {
-      modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
-});
-
-
-    
-</script>
+            // Закрываем модальное окно при клике вне его области
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
 
     
     <!-- Шапка сайта -->
