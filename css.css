@@ -24,6 +24,29 @@ header {
     transition: opacity 0.3s ease; /* Плавная анимация скрытия */
 }
 
+/* Стили для сжатой шапки */
+header.shrunk {
+    padding: 5px 0; /* Уменьшаем отступы */
+}
+
+header.shrunk .logo {
+    display: none; /* Скрываем логотип */
+}
+
+header.shrunk nav ul {
+    display: none; /* Скрываем навигацию */
+}
+
+/* Восстановить логотип и навигацию в нормальном состоянии */
+header:not(.shrunk) .logo {
+    display: block; /* Показываем логотип */
+}
+
+header:not(.shrunk) nav ul {
+    display: flex; /* Показываем навигацию */
+}
+
+
 /* Когда шапка скрыта или сжата */
 header.shrunk {
     opacity: 0; /* Скрываем шапку плавно */
