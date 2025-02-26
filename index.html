@@ -13,47 +13,49 @@
 </head>
 <body>
 
-      <!-- Кнопка для открытия модального окна -->
-<button class="close-btn" id="closeModal">Закрыть</button>
+<!-- Кнопка входа -->
+<button id="loginBtn">Войти</button>
 
-
-    <!-- Модальное окно -->
-    <div class="modal" id="loginModal">
-        <div class="modal-content">
-            <h2>Войти на сайт</h2>
-            <form>
-                <input type="text" id="username" placeholder="Логин" required>
-                <input type="password" id="password" placeholder="Пароль" required>
-                <button type="submit">Войти</button>
-            </form>
-            <button class="close-btn" id="closeModal">Закрыть</button>
-        </div>
-    </div>
-
+<!-- Модальное окно -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Вход</h2>
+    <form id="loginForm">
+      <label for="username">Логин:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <button type="submit">Войти</button>
+    </form>
+  </div>
+</div>
 
 <script>
-// Получаем элементы
-const loginBtn = document.getElementById('loginBtn');
-const loginModal = document.getElementById('loginModal');
-const closeModal = document.getElementById('closeModal');
 
-// Открыть модальное окно
-loginBtn.addEventListener('click', () => {
-    loginModal.style.display = 'block';
-});
+// Получаем элементы модального окна
+var modal = document.getElementById("loginModal");
+var btn = document.getElementById("loginBtn");
+var span = document.getElementsByClassName("close")[0];
 
-// Закрыть модальное окно
-closeModal.addEventListener('click', () => {
-    loginModal.style.display = 'none';
-});
+// Когда пользователь нажимает на кнопку, открываем модальное окно
+btn.onclick = function() {
+    modal.style.display = "block";
+}
 
-// Закрыть модальное окно при клике вне его
-window.addEventListener('click', (event) => {
-    if (event.target === loginModal) {
-        loginModal.style.display = 'none';
+// Когда пользователь нажимает на крестик (закрытие окна)
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Когда пользователь кликает вне модального окна, оно закрывается
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
-});
+}
 
+    
 </script>
 
     
