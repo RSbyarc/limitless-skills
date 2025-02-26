@@ -1,4 +1,4 @@
-/* Стиль для шапки */
+/* В шапке все элементы выравниваются */
 header {
   background: #000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -11,16 +11,15 @@ header {
   align-items: center;
 }
 
-/* Стили для кнопки */
+/* Кнопка перемещается в правый угол */
 #loginBtn {
+  margin-left: auto; /* Это перемещает кнопку вправо */
   padding: 5px 15px;
   background-color: #f44336;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: auto; /* Это перемещает кнопку вправо */
-  display: inline-block; /* Убедимся, что кнопка выводится как блок */
 }
 
 
