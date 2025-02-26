@@ -12,7 +12,7 @@ body {
 header {
     background: #000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -219,10 +219,9 @@ footer {
 
 /* Мобильные устройства - Медиа-запросы */
 
-/* Для устройств с максимальной шириной 768px (например, планшеты и мобильные) */
+/* Для мобильных устройств с максимальной шириной 768px (например, планшеты) */
 @media (max-width: 768px) {
     header {
-        padding: 15px;
         flex-direction: column;
         text-align: center;
     }
@@ -236,7 +235,7 @@ footer {
         margin: 10px 0;
     }
 
-    /* Размер шрифтов и отступы */
+    /* Размер шрифта и отступы */
     #home h1 {
         font-size: 2em;
     }
@@ -254,17 +253,14 @@ footer {
         height: 40px;
     }
 
-    /* Уменьшаем шрифт для текста */
     body {
         font-size: 14px;
     }
 
-    /* Футер */
     footer {
         padding: 10px;
     }
 
-    /* Отзывы и вопросы */
     #reviews, #faq {
         margin-bottom: 30px;
     }
@@ -274,14 +270,16 @@ footer {
     }
 }
 
-/* Для устройств с максимальной шириной 480px (например, смартфоны) */
+/* Для мобильных устройств с максимальной шириной 480px (например, смартфоны) */
 @media (max-width: 480px) {
-    /* Логотип */
+    header {
+        padding: 15px;
+    }
+
     .logo {
         height: 35px;
     }
 
-    /* Уменьшаем размеры шрифтов для мобильных */
     #home h1 {
         font-size: 1.5em;
     }
