@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (currentScroll > lastScrollTop) {
             // Когда прокручиваем вниз, скрыть шапку и сделать её компактной
-            header.style.top = "-80px";
+            header.style.top = "-180px";
             header.classList.add('shrunk'); // Добавляем класс для сжатия
         } else {
             // Когда прокручиваем вверх, вернуть шапку и убрать сжатие
