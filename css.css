@@ -1,4 +1,19 @@
-/* Модальное окно (скрыто по умолчанию) */
+/* Стиль кнопки входа */
+.login-btn {
+    position: fixed;
+    top: 50%;  /* Центрируем кнопку по вертикали */
+    left: 50%;  /* Центрируем кнопку по горизонтали */
+    transform: translate(-50%, -50%); /* Применяем смещение для точного центрирования */
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Модальное окно */
 .modal {
     display: none;
     position: fixed;
@@ -19,8 +34,6 @@
     width: 80%;
     max-width: 400px;
     border-radius: 8px;
-
-    /* Центрируем окно по горизонтали и вертикали */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,14 +43,13 @@
 /* Мобильная адаптация */
 @media (max-width: 768px) {
     .modal-content {
-        width: 90%;  /* Увеличиваем ширину окна на мобильных */
+        width: 90%;
     }
 
     .modal {
-        padding-top: 0;  /* Убираем отступ сверху на мобильных */
+        padding-top: 0;
     }
 }
-
 
 
 
