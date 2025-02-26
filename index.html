@@ -32,27 +32,28 @@
 
 
 <script>
-  // Получаем элементы
-        const loginBtn = document.getElementById('loginBtn');
-        const loginModal = document.getElementById('loginModal');
-        const closeModal = document.getElementById('closeModal');
+// Получаем элементы
+const loginBtn = document.getElementById('loginBtn');
+const loginModal = document.getElementById('loginModal');
+const closeModal = document.getElementById('closeModal');
 
-        // Открытие модального окна при нажатии на кнопку
-        loginBtn.addEventListener('click', () => {
-            loginModal.style.display = 'flex';
-        });
+// Открыть модальное окно
+loginBtn.addEventListener('click', () => {
+    loginModal.style.display = 'block';
+});
 
-        // Закрытие модального окна при нажатии на кнопку "Закрыть"
-        closeModal.addEventListener('click', () => {
-            loginModal.style.display = 'none';
-        });
+// Закрыть модальное окно
+closeModal.addEventListener('click', () => {
+    loginModal.style.display = 'none';
+});
 
-        // Закрытие модального окна при клике вне модального окна
-        window.addEventListener('click', (event) => {
-            if (event.target === loginModal) {
-                loginModal.style.display = 'none';
-            }
-        });
+// Закрыть модальное окно при клике вне его
+window.addEventListener('click', (event) => {
+    if (event.target === loginModal) {
+        loginModal.style.display = 'none';
+    }
+});
+
 </script>
 
     
