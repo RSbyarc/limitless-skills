@@ -33,27 +33,26 @@
 
 <script>
 
-// Получаем элементы модального окна
-var modal = document.getElementById("loginModal");
-var btn = document.getElementById("loginBtn");
-var span = document.getElementsByClassName("close")[0];
+document.addEventListener("DOMContentLoaded", function() {
+  var modal = document.getElementById("loginModal");
+  var btn = document.getElementById("loginBtn");
+  var span = document.getElementsByClassName("close")[0];
 
-// Когда пользователь нажимает на кнопку, открываем модальное окно
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
 
-// Когда пользователь нажимает на крестик (закрытие окна)
-span.onclick = function() {
-    modal.style.display = "none";
-}
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
 
-// Когда пользователь кликает вне модального окна, оно закрывается
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+});
+
 
     
 </script>
