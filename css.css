@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    min-height: 100vh; /* Обеспечивает покрытие всего экрана */
 }
 
 /* Шапка и логотип */
@@ -221,6 +222,10 @@ footer {
 
 /* Для мобильных устройств с максимальной шириной 768px (например, планшеты) */
 @media (max-width: 768px) {
+    body {
+        background-color: #fff; /* Это чтобы фон был белым на мобильных устройствах */
+    }
+
     header {
         flex-direction: column;
         text-align: center;
@@ -272,6 +277,10 @@ footer {
 
 /* Для мобильных устройств с максимальной шириной 480px (например, смартфоны) */
 @media (max-width: 480px) {
+    body {
+        background-color: #fff; /* Белый фон для телефона */
+    }
+
     header {
         padding: 15px;
     }
