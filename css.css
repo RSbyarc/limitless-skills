@@ -1,0 +1,224 @@
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Светлый серый фон */
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Шапка и логотип */
+header {
+    background: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    transition: transform 0.3s ease; /* Плавное увеличение */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0000;  /* При наведении изменяется цвет */
+}
+
+/* Увеличение размера при наведении */
+nav ul li:hover {
+    transform: scale(1.2);  /* Увеличиваем размер элемента */
+}
+
+
+
+
+/* Главная */
+#home {
+    padding: 60px 20px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    border-bottom: 3px solid #ff0000;
+}
+
+#home h1 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+/* Секции */
+section {
+    padding: 40px 20px;
+}
+
+#about, #security, #Game-new, #contacts {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ff0000;
+}
+
+#about h2, #security h2, #Game-new h2, #contacts h2 {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border-top: 3px solid #ff0000;
+}
+
+
+
+/* Новости игр */
+#Game-new {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #ff0000;
+}
+
+#Game-new h2 {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+#Game-new p {
+    color: #333;
+}
+
+/* Логотип */
+.logo {
+    height: 50px;
+    margin: 0 15px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+#contacts {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact {
+    margin-bottom: 20px;
+}
+
+.contact h3 {
+    color: #e63946;  /* Красный для заголовков */
+}
+
+.contact p {
+    color: #333;
+}
+
+.contact a {
+    color: #1d3557; /* Цвет для ссылок */
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Раздел "Отзывы" */
+#reviews {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#reviews h2 {
+    color: #e63946; /* Красный цвет для заголовков */
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.review p {
+    color: #333;
+}
+
+.review strong {
+    color: #e63946; /* Красный для имени */
+}
+
+/* Раздел "Часто задаваемые вопросы" */
+#faq {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#faq h2 {
+    color: #e63946; /* Красный цвет для заголовков */
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.faq-item h3 {
+    color: #1d3557; /* Темно-синий для вопросов */
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #333;
+}
