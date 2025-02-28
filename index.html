@@ -5,66 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Наша команда - Разработка игр</title>
     <link rel="stylesheet" href="css.css">
-    <title>Название твоего сайта</title>
-    <link rel="stylesheet" href="css.css">
-  
- <title>Вход</title>
-    
 </head>
 <body>
-
-<!-- Кнопка входа -->
-    <button id="loginBtn">Войти</button>
-
-    <!-- Модальное окно -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Вход</h2>
-            <form id="loginForm">
-                <label for="username">Логин:</label>
-                <input type="text" id="username" name="username" required><br><br>
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" required><br><br>
-                <button type="submit">Войти</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var modal = document.getElementById("loginModal");
-            var btn = document.getElementById("loginBtn");
-            var span = document.getElementsByClassName("close")[0];
-
-            // Открываем модальное окно при клике на кнопку
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-
-            // Закрываем модальное окно при клике на крестик
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-
-            // Закрываем модальное окно при клике вне его области
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        });
-    </script>
-
-    
     <!-- Шапка сайта -->
-    <header>
+    <header class="header">
         <a href="#home">
             <img src="logo.jpg" alt="Логотип компании" class="logo">
-
         </a>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-list">
                 <li><a href="#home">Главная</a></li>
                 <li><a href="#about">О нас</a></li>
                 <li><a href="#Game-new">Игры</a></li>
@@ -72,117 +21,62 @@
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
+        <button id="loginBtn" class="login-btn">Войти</button>
     </header>
 
-    <!-- Главная страница -->
-    <section id="home">
-        <h1>Решимость, дисциплина, команда.</h1>
-        <h1>Limitless Skill</h1>
-        <p>Добро пожаловать на сайт нашей команды по разработке игр!</p>
+    <!-- Главная секция -->
+    <section id="home" class="section home">
+        <h1>Добро пожаловать на наш сайт</h1>
+        <p>Мы разрабатываем крутые игры!</p>
     </section>
 
     <!-- О нас -->
-    <section id="about">
+    <section id="about" class="section about">
         <h2>О нас</h2>
-        <p>Мы — команда из трёх друзей, стремящихся создавать увлекательные игры.</p>
-        <ul>
-            <li><strong>rsbyarc</strong> — специалист по безопасности.</li>
-            <li><strong>Zerax</strong> — TeamLeader - нашей компании. Ведущий разработчик GameDev.</li>
-            <li><strong>Samurai</strong> — Старший разработчик в компании.</li>
-        </ul>
+        <p>Мы — молодая команда, увлеченная разработкой игр.</p>
+    </section>
+
+    <!-- Игры -->
+    <section id="Game-new" class="section games">
+        <h2>Игры</h2>
+        <p>Наши последние разработки.</p>
     </section>
 
     <!-- Безопасность -->
-    <section id="security">
-        <h2>Информационная безопасность</h2>
-        <p>Здесь будет информация о безопасности игр.</p>
-    </section>
-
-    <!-- Новости игр -->
-    <section id="Game-new">
-        <h2>Новости и проекты</h2>
-        <p>В процессе добавления</p>
-    <div class="project">
-        <h3>Игра 1: Название игры</h3>
-        <p>Описание игры, особенностей, скриншоты или видео.</p>
-    </div>
-    <div class="project">
-        <h3>Игра 2: Название игры</h3>
-        <p>Описание игры, особенности, скриншоты или видео.</p>
-    </div>
+    <section id="security" class="section security">
+        <h2>Безопасность</h2>
+        <p>Мы заботимся о защите ваших данных.</p>
     </section>
 
     <!-- Контакты -->
+    <section id="contacts" class="section contacts">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами: email@example.com</p>
+    </section>
 
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>&copy; 2025 Наша команда по разработке игр</p>
+        <ul class="footer-links">
+            <li><a href="#privacy-policy">Политика конфиденциальности</a></li>
+            <li><a href="#terms">Условия использования</a></li>
+            <li><a href="#about-team">О команде</a></li>
+        </ul>
     </footer>
 
-<section id="faq">
-    <h2>Часто задаваемые вопросы</h2>
-    <div class="faq-item">
-        <h3>Какие игры вы разрабатываете?</h3>
-        <p>Мы специализируемся на создании захватывающих приключенческих игр и головоломок.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Как связаться с вами?</h3>
-        <p>Вы можете написать нам через форму обратной связи на сайте или по email.</p>
-    </div>
-</section>
-
-
-<!-- Контакты -->
-<section id="contacts">
-    <h2>Контакты</h2>
-    <p>Связаться с нами можно по следующим контактам:</p>
-    
-    <div class="contact">
-        <h3>rsbyarc (Информационная безопасность)</h3>
-        <p>Электронная почта: <a href="mailto:rsbyarc@example.com">rsbyarc@example.com</a></p>
-        <p>Телефон: +7 123 456 7890</p>
-        <p>Telegram: <a href="https://t.me/rsbyarc" target="_blank">t.me/rsbyarc</a></p>
-
+    <!-- Модальное окно для входа -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form>
+                <input type="text" placeholder="Логин" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="submit-btn">Войти</button>
+            </form>
+        </div>
     </div>
 
-    <div class="contact">
-        <h3>Zerax (Team Leader, Разработка)</h3>
-        <p>Электронная почта: <a href="mailto:zerax@example.com">zerax@example.com</a></p>
-        <p>Телефон: +7 234 567 8901</p>
-        <p>Telegram: <a href="https://t.me/Zarif2121" target="_blank">t.me/Zarif2121</a></p>
-
-    </div>
-
-    <div class="contact">
-        <h3>Samurai (Старший разработчик)</h3>
-        <p>Электронная почта: <a href="mailto:samurai@example.com">samurai@example.com</a></p>
-        <p>Телефон: +7 345 678 9012</p>
-        <p>Telegram: <a href="https://t.me/Sh0gun69" target="_blank">t.me/Sh0gun69</a></p>
-
-    </div>
-</section>
-
-
-
-<section id="reviews">
-    <h2>Отзывы</h2>
-    <div class="review">
-        <p><strong>Иван П.</strong></p>
-        <p>Отличная команда! Работают быстро и качественно.</p>
-    </div>
-    <div class="review">
-        <p><strong>Мария К.</strong></p>
-        <p>Очень нравится их подход к безопасности. Уверен, что мои данные в безопасности.</p>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 Наша команда по разработке игр</p>
-    <ul>
-        <li><a href="#privacy-policy">Политика конфиденциальности</a></li>
-        <li><a href="#terms">Условия использования</a></li>
-        <li><a href="#about-team">О команде</a></li>
-    </ul>
-</footer>
-
-      <script src="js.js"></script> <!-- Подключаем JS файл -->
-
+    <script src="js.js"></script>
 </body>
 </html>
