@@ -1,414 +1,138 @@
-/* Стили для шапки */
-.header {
-  width: 100%;
-  padding: 10px 20px;
-  background-color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.header .logo {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.login-btn {
-  padding: 5px 15px;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.login-btn:hover {
-  background-color: #d32f2f;
-}
-
-/* Стили для модального окна */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 30%;
-  position: relative;
-  border-radius: 10px;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #aaa;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #000;
-}
-
-
-
-
-
-
-
-
-
-
 /* Общие стили */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Светлый серый фон */
-    color: #000;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    min-height: 100vh; /* Обеспечивает покрытие всего экрана */
+    box-sizing: border-box;
 }
 
-/* Начальные стили для шапки */
-header {
-    background: #000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
-    position: sticky; /* Оставляем sticky для корректного поведения */
-    top: 0;
-    z-index: 1000;
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+/* Шапка */
+.header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    transition: opacity 0.3s ease; /* Плавная анимация скрытия */
+    justify-content: space-between;
 }
 
-/* Стили для сжатой шапки */
-header.shrunk {
-    padding: 5px 0; /* Уменьшаем отступы */
+.logo {
+    height: 50px;
 }
 
-header.shrunk .logo {
-    display: none; /* Скрываем логотип */
-}
-
-header.shrunk nav ul {
-    display: none; /* Скрываем навигацию */
-}
-
-/* Восстановить логотип и навигацию в нормальном состоянии */
-header:not(.shrunk) .logo {
-    display: block; /* Показываем логотип */
-}
-
-header:not(.shrunk) nav ul {
-    display: flex; /* Показываем навигацию */
-}
-
-
-/* Когда шапка скрыта или сжата */
-header.shrunk {
-    opacity: 0; /* Скрываем шапку плавно */
-    pointer-events: none; /* Отключаем кликабельность */
-}
-
-/* Навигация */
-nav ul {
+.navbar .nav-list {
     display: flex;
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-nav ul li {
+.navbar .nav-list li {
     margin: 0 15px;
-    transition: transform 0.3s ease; /* Плавное увеличение */
 }
 
-nav ul li a {
+.navbar .nav-list a {
+    color: white;
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #ff0000;  /* При наведении изменяется цвет */
+.navbar .nav-list a:hover {
+    color: #f44336;
 }
 
-nav ul li:hover {
-    transform: scale(1.2);  /* Увеличиваем размер элемента */
+.login-btn {
+    padding: 5px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Логотип */
-.logo {
-    height: 45px; /* Меньше размер */
-    margin: 0 15px;
-    vertical-align: middle;
-    transition: transform 0.3s;
+.login-btn:hover {
+    background-color: #d32f2f;
 }
 
-.logo:hover {
-    transform: scale(1.1);
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Главная */
-#home {
-    padding: 60px 20px;
-    background: #fff;
-    color: #000;
-    text-align: center;
-    border-bottom: 3px solid #ff0000;
-}
-
-#home h1 {
-    font-size: 2.5em;
-    color: #ff0000;
-    margin-bottom: 10px;
-}
-
-/* Секции */
-section {
-    padding: 40px 20px;
-}
-
-#about, #security, #Game-new, #contacts {
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
     padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #ff0000;
-}
-
-#about h2, #security h2, #Game-new h2, #contacts h2 {
-    color: #ff0000;
-    margin-bottom: 10px;
-}
-
-/* Футер */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #000;
-    color: #fff;
-    border-top: 3px solid #ff0000;
-}
-
-/* Новости игр */
-#Game-new {
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    border-left: 4px solid #ff0000;
-}
-
-#Game-new h2 {
-    color: #ff0000;
-    margin-bottom: 10px;
-}
-
-#Game-new p {
-    color: #333;
-}
-
-/* Контакты */
-#contacts {
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
     text-align: center;
 }
 
-.contact {
-    margin-bottom: 20px;
+.modal-content input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
 }
 
-.contact h3 {
-    color: #e63946;  /* Красный для заголовков */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.contact p {
-    color: #333;
+.close:hover {
+    color: black;
 }
 
-.contact a {
-    color: #1d3557; /* Цвет для ссылок */
+/* Подвал */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* Раздел "Отзывы" */
-#reviews {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#reviews h2 {
-    color: #e63946; /* Красный цвет для заголовков */
-    margin-bottom: 20px;
-}
-
-.review {
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-}
-
-.review p {
-    color: #333;
-}
-
-.review strong {
-    color: #e63946; /* Красный для имени */
-}
-
-/* Раздел "Часто задаваемые вопросы" */
-#faq {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#faq h2 {
-    color: #e63946; /* Красный цвет для заголовков */
-    margin-bottom: 20px;
-}
-
-.faq-item {
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.faq-item h3 {
-    color: #1d3557; /* Темно-синий для вопросов */
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    color: #333;
-}
-
-/* Мобильные устройства - Медиа-запросы */
-
-/* Для мобильных устройств с максимальной шириной 768px (например, планшеты) */
-@media (max-width: 768px) {
-    body {
-        background-color: #fff; /* Это чтобы фон был белым на мобильных устройствах */
-    }
-
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Размер шрифта и отступы */
-    #home h1 {
-        font-size: 2em;
-    }
-
-    section {
-        padding: 30px 15px;
-    }
-
-    #about, #security, #Game-new, #contacts {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    .logo {
-        height: 40px;
-    }
-
-    body {
-        font-size: 14px;
-    }
-
-    footer {
-        padding: 10px;
-    }
-
-    #reviews, #faq {
-        margin-bottom: 30px;
-    }
-
-    .review, .faq-item {
-        margin-bottom: 20px;
-    }
-}
-
-/* Для мобильных устройств с максимальной шириной 480px (например, смартфоны) */
-@media (max-width: 480px) {
-    body {
-        background-color: #fff; /* Белый фон для телефона */
-    }
-
-    header {
-        padding: 15px;
-    }
-
-    .logo {
-        height: 35px;
-    }
-
-    #home h1 {
-        font-size: 1.5em;
-    }
-
-    section {
-        padding: 20px 10px;
-    }
-
-    #about, #security, #Game-new, #contacts {
-        padding: 10px;
-    }
-
-    .review, .faq-item {
-        padding: 10px;
-    }
+.footer-links a:hover {
+    color: #f44336;
 }
